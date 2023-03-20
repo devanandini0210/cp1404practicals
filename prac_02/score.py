@@ -25,5 +25,5 @@ def get_result(score):
             result = "Bad"
     return result
 
-main()
 
+main()
