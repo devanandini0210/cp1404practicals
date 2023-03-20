@@ -1,4 +1,5 @@
 """
+CP1404 - Practical 2
 Program Name:Password Stars
 Author: Devanandini Chakravarti
 Date:20.03.2023
