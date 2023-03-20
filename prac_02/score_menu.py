@@ -1,6 +1,6 @@
 """
 CP1404 - Practical 2
-Program Name:Score
+Program Name:Score_Menu
 Author: Devanandini Chakravarti
 Date:20.03.2023
 """
