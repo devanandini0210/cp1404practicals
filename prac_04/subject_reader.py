@@ -31,7 +31,7 @@ def get_data():
 
 def print_subject_details(data):
     for line in data:
-        print(line[0]+" is taught by "+line[1]+" and has "+str(line[2]))
+        print(f"{line[0]} is taught by {line[1]} and has {(line[2])} students")
 
 
 main()
