@@ -3,7 +3,7 @@ text = text.split()
 count = []
 width = 15
 for i in range(len(text)):
-   count.append(0)
+    count.append(0)
 text.sort()
 words_to_occurrences = dict(zip(text, count))
 
