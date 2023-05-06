@@ -16,5 +16,19 @@ def main():
     for guitar in guitars:
         print(guitar)
 
+    name = input("Enter Guitar name: ")
+    while name != "":
+        year = int(input("Enter the year it was made: "))
+        cost = float(input("Enter the cost of the guitar: "))
+
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+        name = input("Enter Guitar name: ")
+
+    f = open("guitars.csv", "w")
+    for guitar in guitars:
+        f.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+    f.close()
+
 
 main()
