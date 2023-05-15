@@ -1,8 +1,8 @@
-from prac_09.taxi import Taxi
+from prac_09.taxi import SilverServiceTaxi
 
 
 def main():
-    my_taxi = Taxi("Prius 1", 100)
+    my_taxi = SilverServiceTaxi("Prius 1", 100)
     my_taxi.drive(40)
     printDetails(my_taxi.name, my_taxi.fuel, my_taxi.price_per_km, my_taxi.get_fare(), my_taxi.current_fare_distance)
     my_taxi.start_fare()
