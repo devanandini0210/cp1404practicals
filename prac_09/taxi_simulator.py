@@ -8,24 +8,46 @@ def main():
     menu = "q)uit, c)hoose taxi, d)rive"
     print("Let's Drive!")
     choice = input(f"{menu}\n").upper()
+    taxi_choice = -1
+    bill = 0.0
 
     while choice != "Q":
-        taxi_choice = -1
-        bill = 0.0
+
         if choice == "C":
             try:
-                printTaxisAvailable(taxis)
+                print("Taxis available:")
+                printTaxis(taxis)
                 taxi_choice = int(input("Choose Taxi : "))
-                print(f"Bill to Date: ${bill}")
+                if 0 > taxi_choice or taxi_choice >= len(taxis):
+                    print("Invalid Taxi Choice")
             except ValueError:
-                print("Invalid taxi choice \n Bill to date: $0.00")
+                print("Invalid taxi choice")
+            print(f"Bill to Date: ${bill}")
+        elif choice == "D":
+
+            if taxi_choice != -1:
+                distance = int(input("Drive how far? "))
+                taxis[taxi_choice].drive(distance)
+                fare = taxis[taxi_choice].get_fare()
+                print(f"Your {taxis[taxi_choice].name} trip cost you ${fare}")
+                bill += fare
+                print(f"Bill to Date: ${bill}")
+            else:
+                print("You need to choose a taxi before you can drive")
+                print(f"Bill to Date: ${bill}")
+        else:
+            print("Invalid Option")
+
+        choice = input(f"{menu}\n").upper()
+    print(f"Total trip cost: ${bill}")
+    print("Taxis are now:")
+    printTaxis(taxis)
 
 
+def printTaxis(taxis):
 
-
-
-def printTaxisAvailable(taxis):
-    print("Taxis available:")
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
+
+
 main()
