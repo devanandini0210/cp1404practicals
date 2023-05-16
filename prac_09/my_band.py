@@ -9,13 +9,13 @@ def main():
     nuno = Musician("Nuno Bettencourt")
     nuno.add(Guitar("Washburn N4", 1990, 2499.95))
     nuno.add(Guitar("Takamine acoustic", 1986, 1200.0))
-    band.add()
-    band.add()
+    band.add(nuno)
+
     pat = Musician("Pat Badger")
     pat.add(Guitar("Mouradian CS-74 Bass", 2009, 1500.0))
-    band.add()
+    band.add(pat)
     kevin = Musician("Kevin Figueiredo")
-    band.add()
+    band.add(kevin)
 
     print("band (str)")
     print(band)
